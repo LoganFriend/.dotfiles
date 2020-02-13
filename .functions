@@ -30,3 +30,21 @@ archive() {
 function __powerline_cwd_prompt { 
     echo "$(pwd | sed "s|^${HOME}|~|" | awk -F "/" '{print $NF}')|${CWD_THEME_PROMPT_COLOR}" 
 }
+
+cheat() {
+    if [ "$2" ]; then
+        curl "https://cheat.sh/$1/$2"
+    else
+        curl "https://cheat.sh/$1"
+    fi
+}
+
+dict() {
+    if [ "$3" ]; then
+        curl "dict://dict.org/d:$1 $2 $3"
+    elif [ "$2" ]; then
+        curl "dict://dict.org/d:$1 $2"
+    else
+        curl "dict://dict.org/d:$1"
+    fi
+}
