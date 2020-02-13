@@ -135,6 +135,6 @@ https() {                                           # make httpie use https
     http https://$1 $2 $3 $4 $5 $6 $7 $8 $9 $10
 }
 
-source $HOME/dotfiles/.exports
-source $HOME/dotfiles/.aliases
-source $HOME/dotfiles/.functions
+source $HOME/.dotfiles/.exports
+source $HOME/.dotfiles/.aliases
+source $HOME/.dotfiles/.functions
